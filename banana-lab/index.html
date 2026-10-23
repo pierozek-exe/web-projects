@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <script>try{if(sessionStorage.getItem("fxNav"))document.documentElement.classList.add("fx-arriving")}catch(e){}</script>
 <link rel="stylesheet" href="fx.css">
+<script>(function(){var t=["neu","glass","acid"],q=new URLSearchParams(location.search).get("theme");document.documentElement.dataset.theme=t.indexOf(q)>-1?q:t[Math.floor(Math.random()*3)];})();</script>
+<link rel="stylesheet" href="themes.css">
+
 <script src="fx.js" defer></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +14,7 @@
 <meta name="description" content="Wszystko, co chcesz wiedzieć o bananach: dojrzałość, wartości odżywcze, ciekawostki i historia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&family=Syne:wght@600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#E4E6EA}
 a{color:#2B2E35}a:hover{color:#6B5300}
@@ -26,46 +30,49 @@ a:focus-visible,button:focus-visible{outline:2px solid #6B5300;outline-offset:3p
 </style>
 </head>
 <body>
-<div style="min-height: 100vh; box-sizing: border-box; background: #E4E6EA; font-family: 'Manrope', system-ui, sans-serif; color: #2B2E35; padding: clamp(16px, 3vw, 48px)">
+<div class="theme-bg lq-bg" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><i class="b5"></i></div>
+<div class="theme-bg acid-bg" aria-hidden="true"><div class="acid-grid"></div><svg class="star s1" viewBox="0 0 100 100"><path d="M50 0C54 38 62 46 100 50C62 54 54 62 50 100C46 62 38 54 0 50C38 46 46 38 50 0Z"></path></svg><svg class="star s2" viewBox="0 0 100 100"><path d="M50 0C54 38 62 46 100 50C62 54 54 62 50 100C46 62 38 54 0 50C38 46 46 38 50 0Z"></path></svg><svg class="star s3" viewBox="0 0 100 100"><path d="M50 0C54 38 62 46 100 50C62 54 54 62 50 100C46 62 38 54 0 50C38 46 46 38 50 0Z"></path></svg></div>
+<div class="lab-root" style="min-height: 100vh; box-sizing: border-box; background: var(--page, #E4E6EA); font-family: var(--font, 'Manrope', system-ui, sans-serif); color: var(--ink, #2B2E35); padding: clamp(16px, 3vw, 48px)">
 <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
 
 <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
 <div style="display: flex; align-items: center; gap: 18px">
-<div style="width: 60px; height: 60px; border-radius: 50%; background: #E4E6EA; box-shadow: 6px 6px 12px #C3C6CC, -6px -6px 12px #FFFFFF; display: flex; align-items: center; justify-content: center">
+<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 6px 6px 12px #C3C6CC, -6px -6px 12px #FFFFFF); display: flex; align-items: center; justify-content: center">
 <svg width="34" height="34" viewBox="0 0 200 120" aria-hidden="true"><path d="M24 58 C 52 112, 140 116, 176 36 C 150 70, 74 86, 38 48 Z" fill="#E0C93D" class="bc-fill" stroke="#2B2E35" stroke-width="6" stroke-linejoin="round"></path><path d="M172 40 L182 22" stroke="#2B2E35" stroke-width="8" stroke-linecap="round"></path></svg>
 </div>
-<div style="padding: 14px 24px; border-radius: 22px; background: #E4E6EA; box-shadow: 6px 6px 12px #C3C6CC, -6px -6px 12px #FFFFFF">
+<div style="padding: 14px 24px; border-radius: 22px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 6px 6px 12px #C3C6CC, -6px -6px 12px #FFFFFF)">
 <div style="font-weight: 800; font-size: 18px">Banana Lab</div>
-<div style="font-size: 13px; color: #5F6470">Wszystko, co chcesz wiedzieć o bananach</div>
+<div style="font-size: 13px; color: var(--muted, #5F6470)">Wszystko, co chcesz wiedzieć o bananach</div>
 </div>
 </div>
 <nav aria-label="Sekcje" style="display: flex; flex-wrap: wrap; gap: 14px">
-<a class="pill" href="#dojrzalosc" style="padding: 12px 20px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; border-radius: 999px; background: #E4E6EA; box-shadow: 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF; font-size: 14px; font-weight: 600">Dojrzałość</a>
-<a class="pill" href="#ciekawostki" style="padding: 12px 20px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; border-radius: 999px; background: #E4E6EA; box-shadow: 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF; font-size: 14px; font-weight: 600">Ciekawostki</a>
-<a class="pill" href="#historia" style="padding: 12px 20px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; border-radius: 999px; background: #E4E6EA; box-shadow: 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF; font-size: 14px; font-weight: 600">Historia</a>
+<a class="pill" href="#dojrzalosc" style="padding: 12px 20px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; border-radius: 999px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF); font-size: 14px; font-weight: 600">Dojrzałość</a>
+<a class="pill" href="#ciekawostki" style="padding: 12px 20px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; border-radius: 999px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF); font-size: 14px; font-weight: 600">Ciekawostki</a>
+<a class="pill" href="#historia" style="padding: 12px 20px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; border-radius: 999px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF); font-size: 14px; font-weight: 600">Historia</a>
+<button class="pill theme-btn" type="button" id="themeBtn" aria-label="Wylosuj inny motyw strony" style="padding: 12px 20px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; border-radius: 999px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF); font-size: 14px; font-weight: 600">Motyw:&nbsp;<span id="themeName">neumorfizm</span>&nbsp;↻</button>
 </nav>
 </header>
 
-<section style="padding: clamp(28px, 4vw, 56px); border-radius: 36px; background: #E4E6EA; box-shadow: 12px 12px 24px #C3C6CC, -12px -12px 24px #FFFFFF; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px">
+<section style="padding: clamp(28px, 4vw, 56px); border-radius: 36px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 12px 12px 24px #C3C6CC, -12px -12px 24px #FFFFFF); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px">
 <div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 18px">
-<span style="align-self: flex-start; padding: 8px 16px; border-radius: 999px; box-shadow: inset 4px 4px 8px #C3C6CC, inset -4px -4px 8px #FFFFFF; font-size: 13px; font-weight: 700; color: #5F6470">Najpopularniejszy owoc świata</span>
+<span style="align-self: flex-start; padding: 8px 16px; border-radius: 999px; box-shadow: var(--sink, inset 4px 4px 8px #C3C6CC, inset -4px -4px 8px #FFFFFF); font-size: 13px; font-weight: 700; color: var(--muted, #5F6470)">Najpopularniejszy owoc świata</span>
 <h1 style="margin: 0; font-weight: 800; font-size: clamp(40px, 6vw, 76px); line-height: 1; letter-spacing: -0.03em">Banan.<br>Prostszy niż myślisz, dziwniejszy niż wiesz.</h1>
-<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #4A4E57; max-width: 52ch">Botanicznie to jagoda, rośnie na gigantycznym zielu, a ten, którego jesz, to klon. Poznaj banana od skórki do środka.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: var(--text2, #4A4E57); max-width: 52ch">Botanicznie to jagoda, rośnie na gigantycznym zielu, a ten, którego jesz, to klon. Poznaj banana od skórki do środka.</p>
 </div>
-<div style="flex: 0 1 340px; aspect-ratio: 1; max-width: 340px; width: 100%; border-radius: 50%; background: #E4E6EA; box-shadow: inset 10px 10px 20px #C3C6CC, inset -10px -10px 20px #FFFFFF; display: flex; align-items: center; justify-content: center">
+<div style="flex: 0 1 340px; aspect-ratio: 1; max-width: 340px; width: 100%; border-radius: 50%; background: var(--surface, #E4E6EA); box-shadow: var(--sink, inset 10px 10px 20px #C3C6CC, inset -10px -10px 20px #FFFFFF); display: flex; align-items: center; justify-content: center">
 <svg width="78%" viewBox="0 0 200 130" role="img" aria-label="Ilustracja banana"><path d="M20 60 C 50 120, 146 124, 182 34 C 154 72, 72 90, 34 48 Z" fill="#E0C93D" class="bc-fill" stroke="#2B2E35" stroke-width="4" stroke-linejoin="round"></path><path d="M44 64 C 80 96, 138 96, 170 52" fill="none" stroke="#2B2E35" stroke-width="2" opacity="0.35" stroke-linecap="round"></path><path d="M178 38 L190 18" stroke="#2B2E35" stroke-width="7" stroke-linecap="round"></path><g id="spots" fill="#5A3B12" style="display:none"><circle cx="70" cy="86" r="3.5"></circle><circle cx="104" cy="96" r="2.5"></circle><circle cx="132" cy="88" r="4"></circle><circle cx="152" cy="70" r="2.5"></circle><circle cx="90" cy="80" r="2"></circle></g></svg>
 </div>
 </section>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px">
 
-<section id="dojrzalosc" aria-labelledby="ripe-title" style="padding: 32px; border-radius: 32px; background: #E4E6EA; box-shadow: 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF; display: flex; flex-direction: column; gap: 20px">
+<section id="dojrzalosc" aria-labelledby="ripe-title" style="padding: 32px; border-radius: 32px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF); display: flex; flex-direction: column; gap: 20px">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
 <div>
 <h2 id="ripe-title" style="margin: 0; font-size: 20px; font-weight: 800">Miernik dojrzałości</h2>
-<div style="font-size: 13px; color: #5F6470">Skala koloru skórki 1–7</div>
+<div style="font-size: 13px; color: var(--muted, #5F6470)">Skala koloru skórki 1–7</div>
 </div>
-<span style="padding: 8px 14px; border-radius: 999px; box-shadow: inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF; font-size: 13px; font-weight: 700">Etap <span id="stage-num">5</span></span>
+<span style="padding: 8px 14px; border-radius: 999px; box-shadow: var(--sink, inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF); font-size: 13px; font-weight: 700">Etap <span id="stage-num">5</span></span>
 </div>
 <div style="display: flex; justify-content: center">
 <svg width="100%" viewBox="0 0 240 215" role="img" id="gauge" aria-label="Wskaźnik dojrzałości banana, etap 5 z 7" style="max-width: 300px">
@@ -88,41 +95,41 @@ a:focus-visible,button:focus-visible{outline:2px solid #6B5300;outline-offset:3p
 <button class="stage" type="button" data-n="7" aria-pressed="false" aria-label="Etap 7">7</button>
 
 </div>
-<div style="padding: 18px 20px; border-radius: 20px; box-shadow: inset 5px 5px 10px #C3C6CC, inset -5px -5px 10px #FFFFFF">
+<div style="padding: 18px 20px; border-radius: 20px; box-shadow: var(--sink, inset 5px 5px 10px #C3C6CC, inset -5px -5px 10px #FFFFFF)">
 <div style="font-weight: 800; font-size: 16px"><span id="label">Żółty z zieloną końcówką</span></div>
-<div style="font-size: 14px; line-height: 1.5; color: #4A4E57; margin-top: 4px"><span id="desc">Klasyczny banan ze sklepu. Słodki, ale jeszcze nie miękki.</span></div>
+<div style="font-size: 14px; line-height: 1.5; color: var(--text2, #4A4E57); margin-top: 4px"><span id="desc">Klasyczny banan ze sklepu. Słodki, ale jeszcze nie miękki.</span></div>
 </div>
 </section>
 
-<section aria-labelledby="nutri-title" style="padding: 32px; border-radius: 32px; background: #E4E6EA; box-shadow: 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF; display: flex; flex-direction: column; gap: 18px">
+<section aria-labelledby="nutri-title" style="padding: 32px; border-radius: 32px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF); display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; align-items: center; gap: 12px">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 L4 14 H12 L11 22 L20 10 H12 Z"></path></svg>
 <div>
 <h2 id="nutri-title" style="margin: 0; font-size: 20px; font-weight: 800">Co jest w środku</h2>
-<div style="font-size: 13px; color: #5F6470">Średni banan, ok. 118 g</div>
+<div style="font-size: 13px; color: var(--muted, #5F6470)">Średni banan, ok. 118 g</div>
 </div>
 </div>
-<a class="go" href="energia/"><div class="row" style="display: flex; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 20px; box-shadow: 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF">
-<div style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; box-shadow: inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px">kcal</div>
-<div style="flex-grow: 1"><div style="font-weight: 700">Energia</div><div style="font-size: 13px; color: #5F6470">głównie węglowodany</div></div>
+<a class="go" href="energia/"><div class="row" style="display: flex; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 20px; box-shadow: var(--raise, 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF)">
+<div style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; box-shadow: var(--sink, inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px">kcal</div>
+<div style="flex-grow: 1"><div style="font-weight: 700">Energia</div><div style="font-size: 13px; color: var(--muted, #5F6470)">głównie węglowodany</div></div>
 <div style="font-weight: 800; font-size: 18px">~105</div>
 </div></a>
-<a class="go" href="potas/"><div class="row" style="display: flex; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 20px; box-shadow: 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF">
-<div style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; box-shadow: inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px">K</div>
-<div style="flex-grow: 1"><div style="font-weight: 700">Potas</div><div style="font-size: 13px; color: #5F6470">wspiera pracę mięśni i serca</div></div>
+<a class="go" href="potas/"><div class="row" style="display: flex; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 20px; box-shadow: var(--raise, 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF)">
+<div style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; box-shadow: var(--sink, inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px">K</div>
+<div style="flex-grow: 1"><div style="font-weight: 700">Potas</div><div style="font-size: 13px; color: var(--muted, #5F6470)">wspiera pracę mięśni i serca</div></div>
 <div style="font-weight: 800; font-size: 18px">~420 mg</div>
 </div></a>
-<a class="go" href="b6/"><div class="row" style="display: flex; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 20px; box-shadow: 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF">
-<div style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; box-shadow: inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px">B6</div>
-<div style="flex-grow: 1"><div style="font-weight: 700">Witamina B6</div><div style="font-size: 13px; color: #5F6470">ok. 1/4 dziennego zapotrzebowania</div></div>
+<a class="go" href="b6/"><div class="row" style="display: flex; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 20px; box-shadow: var(--raise, 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF)">
+<div style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; box-shadow: var(--sink, inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px">B6</div>
+<div style="flex-grow: 1"><div style="font-weight: 700">Witamina B6</div><div style="font-size: 13px; color: var(--muted, #5F6470)">ok. 1/4 dziennego zapotrzebowania</div></div>
 <div style="font-weight: 800; font-size: 18px">~0,4 mg</div>
 </div></a>
-<a class="go" href="blonnik/"><div class="row" style="display: flex; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 20px; box-shadow: 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF">
-<div style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; box-shadow: inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20 C 8 10, 14 6, 20 4 M8 14 L12 16 M11 10 L15 12"></path></svg></div>
-<div style="flex-grow: 1"><div style="font-weight: 700">Błonnik</div><div style="font-size: 13px; color: #5F6470">więcej skrobi opornej w zielonym</div></div>
+<a class="go" href="blonnik/"><div class="row" style="display: flex; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 20px; box-shadow: var(--raise, 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF)">
+<div style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; box-shadow: var(--sink, inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF); display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20 C 8 10, 14 6, 20 4 M8 14 L12 16 M11 10 L15 12"></path></svg></div>
+<div style="flex-grow: 1"><div style="font-weight: 700">Błonnik</div><div style="font-size: 13px; color: var(--muted, #5F6470)">więcej skrobi opornej w zielonym</div></div>
 <div style="font-weight: 800; font-size: 18px">~3 g</div>
 </div></a>
-<div style="font-size: 12px; color: #5F6470">Wartości przybliżone, na podstawie danych USDA.</div>
+<div style="font-size: 12px; color: var(--muted, #5F6470)">Wartości przybliżone, na podstawie danych USDA.</div>
 </section>
 
 </div>
@@ -130,45 +137,45 @@ a:focus-visible,button:focus-visible{outline:2px solid #6B5300;outline-offset:3p
 <section id="ciekawostki" aria-labelledby="facts-title" style="display: flex; flex-direction: column; gap: 24px">
 <h2 id="facts-title" style="margin: 0 0 0 8px; font-size: 26px; font-weight: 800; letter-spacing: -0.02em">Ciekawostki</h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px">
-<a class="go" href="jagoda/"><article style="padding: 28px; border-radius: 28px; background: #E4E6EA; box-shadow: 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF; display: flex; flex-direction: column; gap: 12px">
-<div style="width: 52px; height: 52px; border-radius: 18px; box-shadow: inset 4px 4px 8px #C3C6CC, inset -4px -4px 8px #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" aria-hidden="true"><circle cx="9" cy="14" r="5"></circle><circle cx="16" cy="9" r="4"></circle><path d="M16 5 V2" stroke-linecap="round"></path></svg></div>
+<a class="go" href="jagoda/"><article style="padding: 28px; border-radius: 28px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF); display: flex; flex-direction: column; gap: 12px">
+<div style="width: 52px; height: 52px; border-radius: 18px; box-shadow: var(--sink, inset 4px 4px 8px #C3C6CC, inset -4px -4px 8px #FFFFFF); display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" aria-hidden="true"><circle cx="9" cy="14" r="5"></circle><circle cx="16" cy="9" r="4"></circle><path d="M16 5 V2" stroke-linecap="round"></path></svg></div>
 <h3 style="margin: 0; font-size: 18px; font-weight: 800">To jagoda</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4E57">Botanicznie banan jest jagodą, a truskawka już nie. Ciemne kropki w środku to szczątkowe nasiona.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: var(--text2, #4A4E57)">Botanicznie banan jest jagodą, a truskawka już nie. Ciemne kropki w środku to szczątkowe nasiona.</p>
 </article></a>
-<a class="go" href="ziele/"><article style="padding: 28px; border-radius: 28px; background: #E4E6EA; box-shadow: 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF; display: flex; flex-direction: column; gap: 12px">
-<div style="width: 52px; height: 52px; border-radius: 18px; box-shadow: inset 4px 4px 8px #C3C6CC, inset -4px -4px 8px #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22 V8 M12 10 C 6 8, 4 4, 4 2 C 8 2, 12 5, 12 8 M12 12 C 18 10, 20 6, 20 4 C 16 4, 12 7, 12 10"></path></svg></div>
+<a class="go" href="ziele/"><article style="padding: 28px; border-radius: 28px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF); display: flex; flex-direction: column; gap: 12px">
+<div style="width: 52px; height: 52px; border-radius: 18px; box-shadow: var(--sink, inset 4px 4px 8px #C3C6CC, inset -4px -4px 8px #FFFFFF); display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22 V8 M12 10 C 6 8, 4 4, 4 2 C 8 2, 12 5, 12 8 M12 12 C 18 10, 20 6, 20 4 C 16 4, 12 7, 12 10"></path></svg></div>
 <h3 style="margin: 0; font-size: 18px; font-weight: 800">Rośnie na zielu, nie na drzewie</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4E57">Bananowiec nie ma drewnianego pnia. To zwinięte liście tworzą nibypień, przez co jest jedną z największych roślin zielnych świata.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: var(--text2, #4A4E57)">Bananowiec nie ma drewnianego pnia. To zwinięte liście tworzą nibypień, przez co jest jedną z największych roślin zielnych świata.</p>
 </article></a>
-<a class="go" href="radioaktywny/"><article style="padding: 28px; border-radius: 28px; background: #E4E6EA; box-shadow: 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF; display: flex; flex-direction: column; gap: 12px">
-<div style="width: 52px; height: 52px; border-radius: 18px; box-shadow: inset 4px 4px 8px #C3C6CC, inset -4px -4px 8px #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="2.5"></circle><path d="M12 2 A10 10 0 0 1 20.7 7 L14.2 10.7 A2.5 2.5 0 0 0 12 9.5 Z M3.3 7 A10 10 0 0 1 12 2 M20.7 17 A10 10 0 0 1 3.3 17 L9.8 13.3 A2.5 2.5 0 0 0 14.2 13.3 Z" stroke-linejoin="round"></path></svg></div>
+<a class="go" href="radioaktywny/"><article style="padding: 28px; border-radius: 28px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF); display: flex; flex-direction: column; gap: 12px">
+<div style="width: 52px; height: 52px; border-radius: 18px; box-shadow: var(--sink, inset 4px 4px 8px #C3C6CC, inset -4px -4px 8px #FFFFFF); display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="2.5"></circle><path d="M12 2 A10 10 0 0 1 20.7 7 L14.2 10.7 A2.5 2.5 0 0 0 12 9.5 Z M3.3 7 A10 10 0 0 1 12 2 M20.7 17 A10 10 0 0 1 3.3 17 L9.8 13.3 A2.5 2.5 0 0 0 14.2 13.3 Z" stroke-linejoin="round"></path></svg></div>
 <h3 style="margin: 0; font-size: 18px; font-weight: 800">Lekko radioaktywny</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4E57">Przez naturalny izotop potasu K-40. Dawka jest znikoma i całkowicie bezpieczna, ale istnieje żartobliwa jednostka „bananowy ekwiwalent dawki”.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: var(--text2, #4A4E57)">Przez naturalny izotop potasu K-40. Dawka jest znikoma i całkowicie bezpieczna, ale istnieje żartobliwa jednostka „bananowy ekwiwalent dawki”.</p>
 </article></a>
-<a class="go" href="dojrzewanie/"><article style="padding: 28px; border-radius: 28px; background: #E4E6EA; box-shadow: 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF; display: flex; flex-direction: column; gap: 12px">
-<div style="width: 52px; height: 52px; border-radius: 18px; box-shadow: inset 4px 4px 8px #C3C6CC, inset -4px -4px 8px #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12 C 5 7, 9 4, 12 4 C 15 4, 19 7, 19 12 M3 16 H21 M7 20 H17"></path></svg></div>
+<a class="go" href="dojrzewanie/"><article style="padding: 28px; border-radius: 28px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF); display: flex; flex-direction: column; gap: 12px">
+<div style="width: 52px; height: 52px; border-radius: 18px; box-shadow: var(--sink, inset 4px 4px 8px #C3C6CC, inset -4px -4px 8px #FFFFFF); display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12 C 5 7, 9 4, 12 4 C 15 4, 19 7, 19 12 M3 16 H21 M7 20 H17"></path></svg></div>
 <h3 style="margin: 0; font-size: 18px; font-weight: 800">Przyspiesza dojrzewanie</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4E57">Banany wydzielają etylen. Włóż twarde awokado do papierowej torby z bananem, a zmięknie szybciej.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: var(--text2, #4A4E57)">Banany wydzielają etylen. Włóż twarde awokado do papierowej torby z bananem, a zmięknie szybciej.</p>
 </article></a>
 </div>
 </section>
 
 <div id="historia" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px">
-<section aria-labelledby="hist-title" style="padding: 36px; border-radius: 32px; background: #E4E6EA; box-shadow: 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF; display: flex; flex-direction: column; gap: 16px">
-<span style="align-self: flex-start; padding: 8px 14px; border-radius: 999px; box-shadow: inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF; font-size: 13px; font-weight: 700; color: #5F6470">Historia</span>
+<section aria-labelledby="hist-title" style="padding: 36px; border-radius: 32px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF); display: flex; flex-direction: column; gap: 16px">
+<span style="align-self: flex-start; padding: 8px 14px; border-radius: 999px; box-shadow: var(--sink, inset 3px 3px 6px #C3C6CC, inset -3px -3px 6px #FFFFFF); font-size: 13px; font-weight: 700; color: var(--muted, #5F6470)">Historia</span>
 <h2 id="hist-title" style="margin: 0; font-size: clamp(24px, 2.6vw, 34px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1">Banan, którego już nie jesz</h2>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4E57">Do połowy XX wieku sklepy sprzedawały odmianę Gros Michel, podobno słodszą i o mocniejszym aromacie. Zniszczyła ją choroba panamska, grzyb atakujący korzenie.</p>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4E57">Zastąpił ją odporny Cavendish, który dziś dominuje w handlu. Problem w tym, że Cavendishe to genetyczne klony, a nowy szczep tej samej choroby (TR4) znów zagraża uprawom na świecie.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: var(--text2, #4A4E57)">Do połowy XX wieku sklepy sprzedawały odmianę Gros Michel, podobno słodszą i o mocniejszym aromacie. Zniszczyła ją choroba panamska, grzyb atakujący korzenie.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: var(--text2, #4A4E57)">Zastąpił ją odporny Cavendish, który dziś dominuje w handlu. Problem w tym, że Cavendishe to genetyczne klony, a nowy szczep tej samej choroby (TR4) znów zagraża uprawom na świecie.</p>
 </section>
-<section aria-labelledby="where-title" style="padding: 32px; border-radius: 32px; background: #E4E6EA; box-shadow: 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF; display: flex; flex-direction: column; gap: 14px">
+<section aria-labelledby="where-title" style="padding: 32px; border-radius: 32px; background: var(--surface, #E4E6EA); box-shadow: var(--raise, 10px 10px 20px #C3C6CC, -10px -10px 20px #FFFFFF); display: flex; flex-direction: column; gap: 14px">
 <h2 id="where-title" style="margin: 0; font-size: 20px; font-weight: 800">Gdzie rosną</h2>
-<a class="go" href="indie/"><div class="row" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-radius: 20px; box-shadow: 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF"><div><div style="font-weight: 700">Indie</div><div style="font-size: 13px; color: #5F6470">największy producent na świecie</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6 L15 12 L9 18"></path></svg></div></a>
-<a class="go" href="ekwador/"><div class="row" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-radius: 20px; box-shadow: 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF"><div><div style="font-weight: 700">Ekwador</div><div style="font-size: 13px; color: #5F6470">czołowy eksporter</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6 L15 12 L9 18"></path></svg></div></a>
-<a class="go" href="chiny-indonezja-brazylia/"><div class="row" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-radius: 20px; box-shadow: 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF"><div><div style="font-weight: 700">Chiny · Indonezja · Brazylia</div><div style="font-size: 13px; color: #5F6470">duża produkcja, głównie na rynek lokalny</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6 L15 12 L9 18"></path></svg></div></a>
+<a class="go" href="indie/"><div class="row" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-radius: 20px; box-shadow: var(--raise, 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF)"><div><div style="font-weight: 700">Indie</div><div style="font-size: 13px; color: var(--muted, #5F6470)">największy producent na świecie</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6 L15 12 L9 18"></path></svg></div></a>
+<a class="go" href="ekwador/"><div class="row" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-radius: 20px; box-shadow: var(--raise, 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF)"><div><div style="font-weight: 700">Ekwador</div><div style="font-size: 13px; color: var(--muted, #5F6470)">czołowy eksporter</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6 L15 12 L9 18"></path></svg></div></a>
+<a class="go" href="chiny-indonezja-brazylia/"><div class="row" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-radius: 20px; box-shadow: var(--raise, 5px 5px 10px #C3C6CC, -5px -5px 10px #FFFFFF)"><div><div style="font-weight: 700">Chiny · Indonezja · Brazylia</div><div style="font-size: 13px; color: var(--muted, #5F6470)">duża produkcja, głównie na rynek lokalny</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2E35" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6 L15 12 L9 18"></path></svg></div></a>
 </section>
 </div>
 
-<footer style="padding: 20px 28px; border-radius: 24px; box-shadow: inset 5px 5px 10px #C3C6CC, inset -5px -5px 10px #FFFFFF; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #5F6470">
+<footer style="padding: 20px 28px; border-radius: 24px; box-shadow: var(--sink, inset 5px 5px 10px #C3C6CC, inset -5px -5px 10px #FFFFFF); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--muted, #5F6470)">
 <span>Banana Lab · 2026</span>
 <span>Zjedz banana. Albo dwa.</span>
 </footer>
@@ -209,6 +216,18 @@ btns.forEach(b=>{
   b.addEventListener('click',()=>setStage(+b.dataset.n));
 });
 setStage(5);
+</script>
+<script>
+(function(){
+  var H=document.documentElement,N={neu:"neumorfizm",glass:"liquid glass",acid:"acid"};
+  var name=document.getElementById("themeName"),btn=document.getElementById("themeBtn");
+  function show(){name.textContent=N[H.dataset.theme]||"neumorfizm";}
+  show();
+  btn.addEventListener("click",function(){
+    var t=["neu","glass","acid"].filter(function(x){return x!==H.dataset.theme;});
+    H.dataset.theme=t[Math.floor(Math.random()*t.length)];show();
+  });
+})();
 </script>
 </body>
 </html>

@@ -1,0 +1,101 @@
+/* Banana Lab — trzy motywy strony głównej, losowane 1/3 : 1/3 : 1/3
+   neu   = neumorfizm (domyślne wartości zapisane w stylach elementów)
+   glass = liquid glass
+   acid  = acid design */
+
+.theme-btn{border:0;font:inherit;font-size:14px;font-weight:600;color:inherit;cursor:pointer}
+.theme-bg{display:none;position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.lab-root{position:relative;z-index:1}
+html,body{transition:background-color .5s ease}
+
+/* =========================================================
+   LIQUID GLASS
+   ========================================================= */
+html[data-theme="glass"]{
+  --page:transparent;
+  --surface:rgba(255,255,255,.26);
+  --raise:0 10px 36px rgba(110,70,200,.18), inset 0 1px 0 rgba(255,255,255,.75), inset 0 0 0 1px rgba(255,255,255,.45);
+  --sink:inset 0 0 0 1px rgba(255,255,255,.6), inset 0 2px 10px rgba(110,70,200,.12);
+  --ink:#1E1940; --muted:#3F3A66; --text2:#2F2A55;
+  --fx-anim:fx-blur; --fx-dur:.9s;
+}
+html[data-theme="glass"] body{background:linear-gradient(125deg,#F7D6FF,#CAD6FF 35%,#FFD1EE 65%,#D3F0FF);background-size:300% 300%;animation:lq-bg 22s ease-in-out infinite}
+@keyframes lq-bg{0%,100%{background-position:0% 30%}50%{background-position:100% 70%}}
+html[data-theme="glass"] .lq-bg{display:block}
+html[data-theme="glass"] [style*="--raise"],html[data-theme="glass"] .theme-btn{-webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%)}
+html[data-theme="glass"] h1,html[data-theme="glass"] h2{font-family:'Antonio','Manrope',sans-serif;text-transform:uppercase;letter-spacing:.01em}
+html[data-theme="glass"] h1{font-weight:700;line-height:.95;background:linear-gradient(120deg,#3A1C8C 0%,#7A2BB8 55%,#B0247E 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 14px rgba(255,255,255,.7))}
+html[data-theme="glass"] h1 + p{color:var(--ink)}
+html[data-theme="glass"] h2{font-weight:700;font-size:1.25em}
+html[data-theme="glass"] a:hover{color:#5B2BD6}
+html[data-theme="glass"] .go:hover article,html[data-theme="glass"] .go:hover .row,html[data-theme="glass"] .row:hover,html[data-theme="glass"] .pill:hover{box-shadow:0 18px 48px rgba(110,70,200,.3), inset 0 1px 0 rgba(255,255,255,.9), inset 0 0 0 1px rgba(255,255,255,.7) !important;background:rgba(255,255,255,.42) !important}
+html[data-theme="glass"] .stage[aria-pressed="false"]{background:rgba(255,255,255,.35) !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7) !important}
+
+/* płynne bloby 3D */
+.lq-bg i{position:absolute;display:block;border-radius:42% 58% 63% 37% / 41% 44% 56% 59%;filter:blur(1px);opacity:.92;
+  background:radial-gradient(circle at 30% 28%,rgba(255,255,255,.85) 0,rgba(255,255,255,0) 26%),linear-gradient(140deg,var(--c1),var(--c2));
+  box-shadow:inset -18px -24px 40px rgba(60,30,140,.28), inset 14px 16px 30px rgba(255,255,255,.35);
+  animation:lq-morph var(--t) ease-in-out infinite alternate, lq-drift calc(var(--t) * 1.6) ease-in-out infinite alternate}
+.lq-bg .b1{--c1:#8EA2FF;--c2:#E48CFF;--t:11s;width:44vmax;height:40vmax;top:-12vmax;left:-12vmax}
+.lq-bg .b2{--c1:#FF9AD5;--c2:#9A7CFF;--t:14s;width:36vmax;height:38vmax;top:8vmax;right:-14vmax}
+.lq-bg .b3{--c1:#7FD8FF;--c2:#B48CFF;--t:12s;width:30vmax;height:26vmax;bottom:-10vmax;left:18vmax}
+.lq-bg .b4{--c1:#FFC2E8;--c2:#FF7FC8;--t:16s;width:22vmax;height:24vmax;bottom:6vmax;right:10vmax}
+.lq-bg .b5{--c1:#C9B6FF;--c2:#7AA8FF;--t:10s;width:14vmax;height:14vmax;top:42vh;left:44vw}
+@keyframes lq-morph{
+  0%{border-radius:42% 58% 63% 37% / 41% 44% 56% 59%}
+  50%{border-radius:63% 37% 38% 62% / 55% 61% 39% 45%}
+  100%{border-radius:35% 65% 55% 45% / 62% 38% 62% 38%}
+}
+@keyframes lq-drift{
+  0%{transform:translate(0,0) rotate(0deg) scale(1)}
+  100%{transform:translate(4vmax,3vmax) rotate(24deg) scale(1.08)}
+}
+
+/* =========================================================
+   ACID
+   ========================================================= */
+html[data-theme="acid"]{
+  --page:transparent;
+  --surface:#0F0F0F;
+  --raise:0 0 0 1px #2C2C2C, 6px 6px 0 #C6FF1A;
+  --sink:inset 0 0 0 1px #333333;
+  --ink:#F3F3F3; --muted:#B4B4B4; --text2:#D2D2D2;
+  --font:'JetBrains Mono','Manrope',monospace;
+  --fx-anim:fx-acid; --fx-dur:.6s; --fx-ease:cubic-bezier(.2,1.4,.4,1);
+}
+html[data-theme="acid"] body{background:#070707;color-scheme:dark}
+html[data-theme="acid"] .acid-bg{display:block;background:radial-gradient(ellipse at 15% 10%,rgba(198,255,26,.16),transparent 45%),radial-gradient(ellipse at 90% 30%,rgba(160,90,255,.18),transparent 50%),radial-gradient(ellipse at 50% 110%,rgba(198,255,26,.12),transparent 50%)}
+html[data-theme="acid"] h1,html[data-theme="acid"] h2,html[data-theme="acid"] h3{font-family:'Syne','Manrope',sans-serif}
+html[data-theme="acid"] h1{font-weight:800;text-transform:uppercase;transform-origin:left;letter-spacing:-.04em;line-height:.9;
+  background:linear-gradient(180deg,#FFFFFF 0%,#BFC3C9 38%,#5B5F66 50%,#E9ECEF 62%,#9CA1A8 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(198,255,26,.25))}
+html[data-theme="acid"] h2{font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:#C6FF1A}
+html[data-theme="acid"] h3{color:#C6FF1A}
+html[data-theme="acid"] a{color:#F3F3F3}
+html[data-theme="acid"] a:hover{color:#C6FF1A}
+html[data-theme="acid"] a:focus-visible,html[data-theme="acid"] button:focus-visible{outline-color:#C6FF1A}
+html[data-theme="acid"] .go:hover article,html[data-theme="acid"] .go:hover .row,html[data-theme="acid"] .row:hover,html[data-theme="acid"] .pill:hover{box-shadow:0 0 0 1px #C6FF1A, 0 0 28px rgba(198,255,26,.4), 8px 8px 0 #A05AFF !important}
+html[data-theme="acid"] .theme-btn{color:#0A0A0A;background:#C6FF1A !important}
+/* SVG: ciemne linie i napisy na jasne */
+html[data-theme="acid"] svg text{fill:#F3F3F3}
+html[data-theme="acid"] svg [stroke="#2B2E35"]{stroke:#C6FF1A}
+html[data-theme="acid"] svg [fill="#2B2E35"]{fill:#C6FF1A}
+html[data-theme="acid"] svg [stroke="#D3D6DC"]{stroke:#262626}
+html[data-theme="acid"] .stage{color:#0A0A0A !important}
+html[data-theme="acid"] .stage[aria-pressed="false"]{background:#161616 !important;color:#E6E6E6 !important;box-shadow:inset 0 0 0 1px #3A3A3A !important}
+html[data-theme="acid"] .stage[aria-pressed="true"]{box-shadow:0 0 0 2px #C6FF1A, 0 0 18px rgba(198,255,26,.5) !important}
+
+/* siatka 3D i chromowane gwiazdki w tle */
+.acid-grid{position:absolute;left:-50%;right:-50%;bottom:-6vh;height:44vh;transform:perspective(380px) rotateX(64deg);transform-origin:bottom;
+  background:repeating-linear-gradient(90deg,rgba(198,255,26,.28) 0 1px,transparent 1px 64px),repeating-linear-gradient(0deg,rgba(198,255,26,.28) 0 1px,transparent 1px 48px);
+  -webkit-mask:linear-gradient(to top,#000 20%,transparent);mask:linear-gradient(to top,#000 20%,transparent);animation:acid-run 2.4s linear infinite}
+@keyframes acid-run{to{background-position:0 0,0 48px}}
+.star{position:absolute;fill:#D9DDE2;filter:drop-shadow(0 0 10px rgba(198,255,26,.55));animation:acid-spin var(--t,14s) linear infinite}
+.star.s1{width:90px;top:12vh;right:8vw;--t:16s}
+.star.s2{width:46px;top:58vh;left:4vw;--t:11s;fill:#C6FF1A}
+.star.s3{width:30px;top:30vh;left:46vw;--t:9s}
+@keyframes acid-spin{to{transform:rotate(360deg)}}
+@keyframes fx-acid{0%{opacity:0;transform:skewX(-14deg) translateX(-30px);filter:hue-rotate(90deg) saturate(3)}60%{opacity:1;transform:skewX(4deg) translateX(4px)}}
+
+@media (prefers-reduced-motion: reduce){
+  .lq-bg i,.acid-grid,.star,html[data-theme="glass"] body{animation:none !important}
+}

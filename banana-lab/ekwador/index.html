@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ekwador — Banana Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#121212;--bg:#FBF6EE;--yellow:#FFE15A;--pink:#FF9EB5;--teal:#5CD6C0;--purple:#A99BFF;--red:#FF6B5B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Lexend',system-ui,sans-serif}
+a{color:var(--ink)}a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.b{border:3px solid var(--ink);border-radius:14px;box-shadow:6px 6px 0 var(--ink)}
+.wrap{max-width:1140px;margin:0 auto;padding:28px 16px 56px;display:flex;flex-direction:column;gap:28px}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:10px 18px;background:#fff;text-decoration:none;font-weight:800;transition:transform .1s,box-shadow .1s}
+.btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}
+.dots{display:flex;gap:6px}.dots i{width:18px;height:18px;border-radius:50%;border:3px solid var(--ink)}
+.hero{background:var(--yellow);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;align-items:center}
+.chip{display:inline-block;padding:6px 14px;background:#fff;font-weight:800;font-size:14px}
+h1{margin:14px 0 0;font-weight:800;font-size:clamp(48px,8vw,104px);line-height:.95;letter-spacing:-.03em}
+.hero p{font-size:18px;line-height:1.55;margin:16px 0 0;max-width:44ch}
+.ship{background:#fff;padding:24px;display:flex;flex-direction:column;gap:12px}
+.ship b{font-size:15px}
+.step{display:flex;align-items:center;gap:12px;padding:12px 14px;font-weight:600;font-size:15px}
+.step span{width:34px;height:34px;flex-shrink:0;border-radius:10px;border:3px solid var(--ink);display:flex;align-items:center;justify-content:center;font-weight:800;background:var(--teal)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.card{padding:26px;display:flex;flex-direction:column;gap:10px}
+.card h2{margin:0;font-size:22px;font-weight:800}
+.card p{margin:0;font-size:16px;line-height:1.55}
+.bars{background:#fff;padding:26px;display:flex;flex-direction:column;gap:14px}
+.bars h2{margin:0 0 4px;font-size:24px;font-weight:800}
+.bar{display:grid;grid-template-columns:120px 1fr;gap:12px;align-items:center;font-weight:600}
+.bar div{height:30px;border:3px solid var(--ink);border-radius:999px;overflow:hidden;background:var(--bg)}
+.bar i{display:block;height:100%;border-right:3px solid var(--ink)}
+.note{font-size:13px;margin:0}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="top" aria-label="Nawigacja"><a class="b btn" href="../">← Banana Lab</a><div class="dots" aria-hidden="true"><i style="background:var(--red)"></i><i style="background:var(--purple)"></i><i style="background:var(--teal)"></i><i style="background:var(--yellow)"></i><i style="background:var(--pink)"></i></div></nav>
+<section class="b hero" aria-labelledby="h1">
+<div>
+<span class="b chip">06 / Gdzie rosną</span>
+<h1 id="h1">Ekwador.<br>Bananowy port świata.</h1>
+<p>To nie największy producent, ale czołowy eksporter. Spora część bananów w europejskich sklepach mogła przypłynąć właśnie stąd.</p>
+</div>
+<div class="b ship">
+<b>Droga banana z Ekwadoru</b>
+<div class="b step"><span>1</span>Zbiór, gdy owoce są jeszcze zielone</div>
+<div class="b step"><span>2</span>Mycie, pakowanie w kartony</div>
+<div class="b step"><span>3</span>Kontener chłodniczy i statek przez ocean</div>
+<div class="b step"><span>4</span>Dojrzewalnia z etylenem u celu</div>
+<div class="b step"><span>5</span>Żółty banan na półce</div>
+</div>
+</section>
+<section class="grid" aria-label="Ciekawostki o Ekwadorze">
+<article class="b card" style="background:var(--pink)"><h2>Zielone na start</h2><p>Banany jadą przez ocean zielone i twarde. Dojrzałe nie przetrwałyby kilku tygodni podróży.</p></article>
+<article class="b card" style="background:var(--teal)"><h2>Zimno, ale nie za</h2><p>W kontenerze trzyma się chłodną temperaturę, by spowolnić dojrzewanie. Zbyt zimno szkodzi skórce, która ciemnieje.</p></article>
+<article class="b card" style="background:var(--purple)"><h2>Klimat idealny</h2><p>Ciepło, wilgoć i żyzne gleby nizin przy Pacyfiku sprawiają, że banany owocują tu przez cały rok.</p></article>
+</section>
+<section class="b bars" aria-labelledby="h-b">
+<h2 id="h-b">Kto eksportuje, a kto produkuje</h2>
+<div class="bar"><span>Ekwador</span><div><i style="width:90%;background:var(--yellow)"></i></div></div>
+<div class="bar"><span>Indie</span><div><i style="width:12%;background:var(--red)"></i></div></div>
+<p class="note">Poglądowo: udział eksportu we własnych zbiorach. Ekwador wysyła za granicę większość bananów, Indie zjadają prawie wszystkie u siebie.</p>
+</section>
+<footer class="foot"><a class="b btn" href="../indie/">← Indie</a><a class="b btn" style="background:var(--yellow)" href="../chiny-indonezja-brazylia/">Chiny · Indonezja · Brazylia →</a></footer>
+</div>
+</body>
+</html>

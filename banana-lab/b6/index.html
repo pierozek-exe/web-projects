@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Witamina B6 — Banana Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#D9D9D6;--ink:#151515;--red:#E8443A;--muted:#3E3E3E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter Tight',Helvetica,Arial,sans-serif}
+a{color:var(--ink)}a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.page{max-width:1280px;margin:0 auto;padding:24px clamp(16px,4vw,48px) 48px}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;font-size:12px;line-height:1.35;padding-bottom:16px;border-bottom:1px solid var(--ink)}
+.meta a{text-decoration:none;font-weight:700}
+.hero{position:relative;padding:clamp(40px,8vw,96px) 0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.big{grid-column:1/-1;margin:0;font-weight:800;font-size:clamp(56px,13vw,200px);line-height:.86;letter-spacing:-.055em}
+.big span{display:block}
+.big .in{padding-left:12%}
+.big .in2{padding-left:30%}
+.redbox{grid-column:8/span 4;margin-top:-18%;background:var(--red);color:#fff;padding:22px;font-size:14px;line-height:1.45;aspect-ratio:1;display:flex;flex-direction:column;justify-content:space-between;max-width:320px}
+.redbox b{font-size:13px;letter-spacing:.02em}
+.redbox strong{font-size:52px;line-height:1;letter-spacing:-.04em}
+.cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;border-top:1px solid var(--ink);padding-top:24px}
+.label{grid-column:span 3;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.body{grid-column:span 9;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;font-size:17px;line-height:1.5}
+.body p{margin:0}
+.table{width:100%;border-collapse:collapse;font-size:16px}
+.table td,.table th{border-bottom:1px solid var(--ink);padding:14px 0;text-align:left}
+.table th{font-weight:400;color:var(--muted)}
+.table td:last-child{text-align:right;font-weight:700}
+.row{margin-top:56px}
+.foot{margin-top:72px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--ink);padding-top:16px;font-size:14px;font-weight:700}
+.foot a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+@media (max-width:760px){.meta{grid-template-columns:repeat(2,minmax(0,1fr))}.redbox{grid-column:1/-1;margin-top:16px}.label,.body{grid-column:1/-1}.big .in,.big .in2{padding-left:0}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="meta">
+<a href="../">← Banana Lab</a>
+<span>03 / Witamina B6<br>Pirydoksyna</span>
+<span>Średni banan<br>ok. 118 g</span>
+<span>Nutrition<br>&amp; Design</span>
+</header>
+<section class="hero" aria-labelledby="h1">
+<h1 id="h1" class="big"><span>Mała</span><span class="in">witamina,</span><span class="in2">duża</span><span>robota.</span></h1>
+<div class="redbox"><b>B6 w bananie</b><strong>~0,4 mg</strong><span>To około jednej czwartej do jednej trzeciej dziennego zapotrzebowania dorosłego, zależnie od przyjętej normy.</span></div>
+</section>
+<section class="cols" aria-labelledby="h-role">
+<div class="label" id="h-role">01 — Do czego służy</div>
+<div class="body">
+<p>Witamina B6 bierze udział w ponad stu reakcjach enzymatycznych, głównie w przemianach białek i aminokwasów.</p>
+<p>Jest potrzebna do produkcji neuroprzekaźników, takich jak serotonina i dopamina, oraz do wytwarzania hemoglobiny.</p>
+</div>
+</section>
+<section class="cols row" aria-labelledby="h-need">
+<div class="label" id="h-need">02 — Ile potrzeba</div>
+<div class="body">
+<table class="table">
+<tbody>
+<tr><th scope="row">Dorośli (19–50 lat)</th><td>~1,3 mg / dzień</td></tr>
+<tr><th scope="row">Jeden banan</th><td>~0,4 mg</td></tr>
+<tr><th scope="row">Pokrycie</th><td>~25–33%</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="cols row" aria-labelledby="h-src">
+<div class="label" id="h-src">03 — Gdzie jeszcze</div>
+<div class="body">
+<p>Kurczak, indyk, ryby (tuńczyk, łosoś), ciecierzyca i ziemniaki.</p>
+<p>Banan wygrywa wygodą: nie trzeba go gotować ani myć, a skórka sama w sobie jest opakowaniem.</p>
+</div>
+</section>
+<footer class="foot">
+<a href="../potas/">← Potas</a>
+<a href="../blonnik/">Błonnik →</a>
+</footer>
+</div>
+</body>
+</html>

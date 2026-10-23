@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energia — Banana Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#FF3EC8;--cyan:#38F2FF;--sun1:#FFB547;--sun2:#FF3E9A;--bg:#0B0420;--ink:#F4ECFF;--muted:#C9B8F0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;overflow-x:hidden}
+a{color:var(--cyan)}a:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:96px 16px 40vh;overflow:hidden;background:radial-gradient(ellipse at 50% 100%,#3A0E6B 0%,var(--bg) 70%)}
+.stars{position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#fff 1px,transparent 1.5px);background-size:120px 120px,190px 190px;background-position:10px 20px,70px 90px;opacity:.5}
+.sun{position:absolute;bottom:22vh;left:50%;transform:translateX(-50%);width:min(440px,80vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(var(--sun1),var(--sun2));-webkit-mask:linear-gradient(#000 0 55%,transparent 55% 58%,#000 58% 66%,transparent 66% 70%,#000 70% 76%,transparent 76% 81%,#000 81% 88%,transparent 88% 94%,#000 94%);mask:linear-gradient(#000 0 55%,transparent 55% 58%,#000 58% 66%,transparent 66% 70%,#000 70% 76%,transparent 76% 81%,#000 81% 88%,transparent 88% 94%,#000 94%);box-shadow:0 0 120px rgba(255,62,154,.6);filter:drop-shadow(0 0 40px rgba(255,62,154,.7))}
+.floor{position:absolute;bottom:0;left:-50%;width:200%;height:34vh;background:linear-gradient(transparent 0 0),repeating-linear-gradient(90deg,rgba(56,242,255,.8) 0 2px,transparent 2px 80px),repeating-linear-gradient(0deg,rgba(255,62,200,.85) 0 2px,transparent 2px 46px);transform:perspective(320px) rotateX(62deg);transform-origin:top;animation:roll 1.6s linear infinite;background-color:#14063A}
+@keyframes roll{to{background-position:0 0,0 0,0 46px}}
+@media (prefers-reduced-motion:reduce){.floor{animation:none}}
+h1{position:relative;font-family:'Audiowide',sans-serif;font-size:clamp(52px,11vw,150px);margin:0;letter-spacing:.04em;color:#fff;text-shadow:0 0 12px var(--pink),0 0 32px var(--pink),0 0 64px rgba(255,62,200,.6)}
+.tag{position:relative;font-family:'Audiowide',sans-serif;color:var(--cyan);letter-spacing:.3em;font-size:14px;text-shadow:0 0 10px var(--cyan);margin-bottom:12px}
+.lead{position:relative;max-width:46ch;font-size:19px;line-height:1.55;color:var(--ink);margin:18px auto 0;padding:14px 20px;border-radius:14px;background:rgba(11,4,32,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+main{max-width:1100px;margin:0 auto;padding:64px 16px 40px;display:flex;flex-direction:column;gap:56px}
+h2{font-family:'Audiowide',sans-serif;font-size:clamp(26px,3.6vw,40px);margin:0 0 20px;color:var(--cyan);text-shadow:0 0 14px rgba(56,242,255,.6)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.stat{border:2px solid var(--pink);border-radius:14px;padding:24px;background:rgba(255,62,200,.06);box-shadow:0 0 24px rgba(255,62,200,.25),inset 0 0 24px rgba(255,62,200,.12)}
+.stat b{display:block;font-family:'Audiowide',sans-serif;font-size:44px;color:#fff;text-shadow:0 0 14px var(--pink)}
+.stat span{color:var(--muted);font-size:15px}
+.bars{display:flex;flex-direction:column;gap:14px}
+.bar{display:grid;grid-template-columns:120px 1fr 64px;gap:14px;align-items:center;font-size:15px}
+.track{height:18px;border-radius:9px;background:#24104F;overflow:hidden}
+.fill{height:100%;background:linear-gradient(90deg,var(--cyan),var(--pink));box-shadow:0 0 16px var(--pink)}
+.text{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;font-size:17px;line-height:1.6;color:var(--ink)}
+.text p{margin:0}
+.nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;border-top:1px solid #3A2370;font-family:'Audiowide',sans-serif}
+.nav a{padding:12px 18px;border:2px solid var(--cyan);border-radius:999px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;box-shadow:0 0 14px rgba(56,242,255,.35)}
+.note{font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="stars" aria-hidden="true"></div>
+<div class="sun" aria-hidden="true"></div>
+<div class="floor" aria-hidden="true"></div>
+<div class="tag">BANANA LAB · 01 / ENERGIA</div>
+<h1>105 KCAL</h1>
+<p class="lead">Banan to mała bateria w skórce. Szybkie cukry na teraz, skrobia na później, wszystko w poręcznym opakowaniu bez plastiku.</p>
+</header>
+<main>
+<section aria-labelledby="h-stats">
+<h2 id="h-stats">Co daje jeden banan</h2>
+<div class="stats">
+<div class="stat"><b>~105</b><span>kcal w średnim bananie (ok. 118 g)</span></div>
+<div class="stat"><b>~27 g</b><span>węglowodanów, główne źródło energii</span></div>
+<div class="stat"><b>~14 g</b><span>cukrów: glukoza, fruktoza, sacharoza</span></div>
+<div class="stat"><b>&lt;0,5 g</b><span>tłuszczu, praktycznie zero</span></div>
+</div>
+</section>
+<section aria-labelledby="h-bars">
+<h2 id="h-bars">Skład energii</h2>
+<div class="bars">
+<div class="bar"><span>Węglowodany</span><div class="track"><div class="fill" style="width:93%"></div></div><span>~93%</span></div>
+<div class="bar"><span>Białko</span><div class="track"><div class="fill" style="width:4%"></div></div><span>~4%</span></div>
+<div class="bar"><span>Tłuszcz</span><div class="track"><div class="fill" style="width:3%"></div></div><span>~3%</span></div>
+</div>
+<p class="note">Udział w kaloriach, wartości przybliżone na podstawie danych USDA.</p>
+</section>
+<section aria-labelledby="h-why">
+<h2 id="h-why">Dlaczego sportowcy go kochają</h2>
+<div class="text">
+<p>Cukry z dojrzałego banana wchłaniają się szybko, więc energia przychodzi w kilkanaście minut. Dlatego tak często widać banany w przerwach między setami na kortach czy na punktach odżywczych w maratonach.</p>
+<p>Im banan bardziej zielony, tym więcej w nim skrobi, która uwalnia energię wolniej. Dojrzały, z cętkami, to już prawie czysty szybki cukier. Wybierasz więc tempo, w jakim chcesz dostać paliwo.</p>
+</div>
+</section>
+<nav class="nav" aria-label="Nawigacja">
+<a href="../">← Banana Lab</a>
+<a href="../potas/">Dalej: Potas →</a>
+</nav>
+</main>
+</body>
+</html>

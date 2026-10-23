@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indie — Banana Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#4A1B26;--wine2:#6B2A38;--cream:#F1E9D8;--paper:#E8DCC4;--ink:#2B1A14;--muted:#5A4636;--gold:#A9874F}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,var(--wine2),var(--wine) 70%);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh}
+a{color:var(--wine)}a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:32px 16px 56px;display:flex;flex-direction:column;gap:28px}
+.ticket{background:var(--cream);padding:28px clamp(20px,4vw,44px);clip-path:polygon(28px 0,30% 0,33% 14px,67% 14px,70% 0,calc(100% - 28px) 0,100% 28px,100% calc(100% - 28px),calc(100% - 28px) 100%,70% 100%,67% calc(100% - 14px),33% calc(100% - 14px),30% 100%,28px 100%,0 calc(100% - 28px),0 28px)}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.bar a{text-decoration:none;font-weight:700;letter-spacing:.12em;min-height:44px;display:inline-flex;align-items:center}
+.checks{display:inline-block;width:64px;height:10px;background:repeating-linear-gradient(90deg,var(--ink) 0 8px,transparent 8px 16px),repeating-linear-gradient(90deg,transparent 0 8px,var(--ink) 8px 16px);background-size:100% 50%;background-repeat:no-repeat;background-position:top,bottom}
+.hero{position:relative;padding:clamp(40px,7vw,80px) clamp(20px,4vw,44px);text-align:center;background:linear-gradient(rgba(74,27,38,.25),rgba(74,27,38,.55)),radial-gradient(ellipse at 30% 70%,#7C8B4A,transparent 60%),radial-gradient(ellipse at 70% 40%,#B9925B,transparent 55%),linear-gradient(#C9A27A,#6E5A3A);color:var(--cream);border:1px solid rgba(241,233,216,.4)}
+.hero .script{font-family:'Pinyon Script',cursive;font-size:clamp(56px,10vw,120px);line-height:1;color:rgba(241,233,216,.9)}
+.hero h1{margin:0;font-weight:500;font-size:clamp(40px,7vw,84px);letter-spacing:.18em;text-transform:uppercase}
+.hero p{max-width:48ch;margin:16px auto 0;font-size:20px;line-height:1.5;font-style:italic}
+.orn{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);font-size:18px;margin:6px 0}
+.orn:before,.orn:after{content:"";height:1px;width:80px;background:currentColor}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{display:flex;flex-direction:column;gap:10px}
+.num{font-size:13px;letter-spacing:.2em;color:var(--muted)}
+.card h2{margin:0;font-size:30px;font-weight:700;line-height:1.05}
+.card p{margin:0;font-size:19px;line-height:1.5;color:var(--ink)}
+.quote{text-align:center}
+.quote blockquote{margin:0;font-size:clamp(24px,3.4vw,34px);font-style:italic;line-height:1.35}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.foot a{color:var(--cream);text-decoration:none;font-size:19px;letter-spacing:.08em;min-height:44px;display:inline-flex;align-items:center;border-bottom:1px solid var(--gold)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="ticket bar" aria-label="Nawigacja"><a href="../">← Banana Lab</a><span class="checks" aria-hidden="true"></span><span>No. 05 · Indie</span><span class="checks" aria-hidden="true"></span><span>Anno 2026</span></nav>
+<header class="hero">
+<div class="script" aria-hidden="true">Kadali</div>
+<h1>Indie</h1>
+<div class="orn" aria-hidden="true">✦</div>
+<p>Największy producent bananów na świecie. Wytwarza mniej więcej jedną czwartą światowych zbiorów, a i tak prawie wszystko zjada na miejscu.</p>
+</header>
+<section class="grid" aria-label="Opowieści z Indii">
+<article class="ticket card"><span class="num">— I —</span><h2>Dla siebie, nie na eksport</h2><p>Mimo gigantycznej produkcji Indie eksportują niewiele. Banan jest tam codziennym jedzeniem, nie towarem na statki.</p></article>
+<article class="ticket card"><span class="num">— II —</span><h2>Setki odmian</h2><p>Od małych, słodkich bananów deserowych po duże odmiany do gotowania. Na targach znajdziesz kolory i kształty, których nie zobaczysz w Europie.</p></article>
+<article class="ticket card"><span class="num">— III —</span><h2>Liść zamiast talerza</h2><p>Na południu kraju liść bananowca od wieków służy jako talerz. Jest duży, wodoodporny i po posiłku po prostu się rozkłada.</p></article>
+</section>
+<section class="ticket quote" aria-label="Myśl przewodnia">
+<div class="orn" aria-hidden="true">✦</div>
+<blockquote>Gdzie indziej banan jest owocem. W Indiach bywa też naczyniem, warzywem i ozdobą.</blockquote>
+<div class="orn" aria-hidden="true">✦</div>
+</section>
+<footer class="foot"><a href="../blonnik/">← Błonnik</a><a href="../ekwador/">Ekwador →</a></footer>
+</div>
+</body>
+</html>

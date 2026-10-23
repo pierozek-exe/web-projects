@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rośnie na zielu — Banana Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2EEE6;--ink:#1B1B19;--muted:#4F4B44;--red:#B5103C}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Cormorant',Georgia,serif;background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1px);background-size:5px 5px}
+a{color:var(--ink)}a:focus-visible{outline:1px solid var(--red);outline-offset:4px}
+.page{max-width:1180px;margin:0 auto;padding:28px clamp(16px,4vw,56px) 64px;position:relative}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:17px;letter-spacing:.12em}
+.top a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.hero{position:relative;display:grid;grid-template-columns:90px minmax(0,1fr) minmax(0,1.3fr);gap:32px;align-items:center;min-height:72vh;padding:24px 0}
+.vert{writing-mode:vertical-rl;font-family:'Shippori Mincho',serif;font-size:44px;letter-spacing:.2em;display:flex;flex-direction:column;align-items:center;gap:22px}
+.dot{display:block;flex:0 0 40px;width:40px;height:40px;min-width:40px;min-height:40px;border-radius:50%;background:var(--red);writing-mode:horizontal-tb}
+.text{display:flex;flex-direction:column;gap:18px;text-align:center;align-items:center}
+h1{margin:0;font-weight:400;font-size:clamp(38px,5vw,60px);line-height:1.1}
+.text p{margin:0;max-width:34ch;font-size:20px;line-height:1.6;color:var(--muted)}
+.text strong{color:var(--ink);font-weight:500}
+.rings{width:100%;height:auto}
+.essays{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px;padding:48px 0;border-top:1px solid rgba(27,27,25,.25)}
+.essay h2{margin:0 0 10px;font-weight:500;font-size:28px}
+.essay span{display:block;font-family:'Shippori Mincho',serif;font-size:13px;letter-spacing:.3em;color:var(--red);margin-bottom:8px}
+.essay p{margin:0;font-size:19px;line-height:1.65;color:var(--muted)}
+.haiku{text-align:center;padding:40px 0;font-style:italic;font-size:clamp(22px,3vw,30px);line-height:1.6}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(27,27,25,.25);padding-top:18px;font-size:19px;letter-spacing:.06em}
+.foot a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+@media (max-width:860px){.hero{grid-template-columns:1fr;min-height:auto}.vert{writing-mode:horizontal-tb;flex-direction:row;justify-content:center}}
+</style>
+</head>
+<body>
+<div class="page">
+<nav class="top" aria-label="Nawigacja"><a href="../">← Banana Lab</a><span>09 · Ciekawostki</span></nav>
+<section class="hero" aria-labelledby="h1">
+<div class="vert" aria-hidden="true"><span>バナナ</span><span class="dot"></span></div>
+<div class="text">
+<h1 id="h1">Roślina, która<br>udaje drzewo</h1>
+<p>Bananowiec nie ma drewna. Jego <strong>pień</strong> to ciasno zwinięte pochwy liściowe, więc botanicznie to <strong>ziele</strong>, jedno z największych na świecie.</p>
+</div>
+<svg class="rings" viewBox="0 0 400 340" aria-hidden="true">
+<g fill="none" stroke="#1B1B19" stroke-linecap="round">
+<path d="M200 170 m-18 0 a18 16 0 1 0 36 2 a18 17 0 1 0 -36 -2" stroke-width="3"></path>
+<path d="M200 170 m-40 2 c0-26 22-38 42-36 c24 2 40 18 38 40 c-2 24-22 38-44 36 c-22-2-36-18-36-40z" stroke-width="5"></path>
+<path d="M200 170 m-66 0 c2-42 34-62 68-60 c38 2 64 30 62 64 c-2 38-34 62-68 60 c-36-2-64-26-62-64z" stroke-width="3"></path>
+<path d="M200 170 m-94 4 c0-58 46-86 96-84 c52 2 90 40 88 90 c-2 52-48 84-96 82 c-50-2-88-36-88-88z" stroke-width="7" stroke-dasharray="40 6 18 5"></path>
+<path d="M200 170 m-122 2 c2-74 60-110 124-108 c66 2 114 52 112 116 c-2 66-60 108-124 106 c-64-2-114-48-112-114z" stroke-width="4"></path>
+<path d="M200 170 m-150 6 c0-92 74-136 152-134 c80 2 140 62 138 142 c-2 82-74 132-152 130 c-78-2-138-58-138-138z" stroke-width="9" stroke-dasharray="70 8 24 6 110 10"></path>
+<path d="M200 170 m-176 2 c2-108 88-160 178-158" stroke-width="3"></path>
+<path d="M378 176 c-2 94-86 152-176 150" stroke-width="5" stroke-dasharray="30 8"></path>
+</g>
+</svg>
+</section>
+<section class="essays" aria-label="O bananowcu">
+<article class="essay"><span>一 · PIEŃ</span><h2>Nibypień</h2><p>To, co wygląda jak pień, to warstwy liści owinięte jedna wokół drugiej. Rozetniesz go i zobaczysz słoje z liści, nie z drewna.</p></article>
+<article class="essay"><span>二 · LIŚCIE</span><h2>Piękno w rozdarciu</h2><p>Wiatr naturalnie rozdziera ogromne liście na paski. Nie jest to uszkodzenie, tylko sposób, by roślina nie łamała się przy podmuchach.</p></article>
+<article class="essay"><span>三 · CYKL</span><h2>Jedno owocowanie</h2><p>Każdy nibypień owocuje raz i obumiera. Z podziemnej bulwy wyrastają nowe odrosty, które przejmują pałeczkę. Wszystkie są klonami rodzica.</p></article>
+</section>
+<p class="haiku">Liść rozdarty wiatrem,<br>pień z liści, nie z drewna.<br>a owoc wciąż słodki.</p>
+<footer class="foot"><a href="../jagoda/">← To jagoda</a><a href="../radioaktywny/">Lekko radioaktywny →</a></footer>
+</div>
+</body>
+</html>

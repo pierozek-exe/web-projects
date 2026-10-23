@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chiny · Indonezja · Brazylia — Banana Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=VT323&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#FF4FD8;--lime:#D7FF3A;--blue:#2B3BFF;--ink:#0F0F0F;--paper:#F3F0E8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;overflow-x:hidden}
+a{color:var(--ink)}a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.page{max-width:1240px;margin:0 auto;padding:20px 16px 56px;position:relative}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-family:'VT323',monospace;font-size:22px}
+.top a{background:var(--ink);color:var(--lime);padding:8px 14px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.collage{position:relative;margin-top:16px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;align-items:start}
+.halftone{background-color:#111;background-image:radial-gradient(#fff 28%,transparent 30%);background-size:8px 8px}
+.checker{background:repeating-conic-gradient(#111 0 25%,#fff 0 50%) 0 0/24px 24px}
+.title{grid-column:1/span 8;position:relative;padding:28px;min-height:420px;background:linear-gradient(135deg,var(--pink),#8F3BFF 55%,var(--blue));overflow:hidden}
+.title h1{position:relative;margin:0;font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(64px,12vw,170px);line-height:.85;color:#fff;text-transform:uppercase;text-shadow:6px 6px 0 var(--ink)}
+.title .sub{position:relative;display:inline-block;margin-top:18px;background:var(--lime);padding:6px 12px;font-family:'VT323',monospace;font-size:24px;transform:rotate(-2deg)}
+.title .dots{position:absolute;right:-40px;bottom:-40px;width:260px;height:260px;border-radius:50%;opacity:.45}
+.side{grid-column:9/span 4;display:flex;flex-direction:column;gap:14px}
+.win{background:#C3C3C3;border:2px solid;border-color:#fff #444 #444 #fff;box-shadow:4px 4px 0 var(--ink);font-size:15px}
+.win .bar{background:linear-gradient(90deg,#000A7A,#1E6BD6);color:#fff;font-family:'VT323',monospace;font-size:20px;padding:2px 6px;display:flex;justify-content:space-between;align-items:center}
+.win .bar i{display:inline-block;width:16px;height:14px;background:#C3C3C3;border:1px solid;border-color:#fff #444 #444 #fff;margin-left:3px}
+.win .body{padding:12px 14px;line-height:1.5;background:#fff;margin:4px;border:2px solid;border-color:#444 #fff #fff #444}
+.win h2{margin:0 0 6px;font-family:'Anton',sans-serif;font-weight:400;font-size:30px;letter-spacing:.01em;text-transform:uppercase}
+.win p{margin:0}
+.sticker{display:inline-block;background:var(--lime);border:3px solid var(--ink);padding:10px 14px;font-family:'VT323',monospace;font-size:22px;transform:rotate(3deg);box-shadow:4px 4px 0 var(--ink)}
+.row{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:6px}
+.strip{grid-column:1/-1;height:28px;margin:6px 0}
+.term{grid-column:1/-1;background:var(--ink);color:var(--lime);font-family:'VT323',monospace;font-size:22px;padding:18px 20px;line-height:1.35}
+.term span{color:var(--pink)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:22px;font-family:'VT323',monospace;font-size:24px}
+.foot a{background:var(--pink);color:var(--ink);padding:8px 16px;text-decoration:none;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);min-height:44px;display:inline-flex;align-items:center}
+@media (max-width:860px){.title,.side{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="page">
+<nav class="top" aria-label="Nawigacja"><a href="../">&lt;&lt; banana_lab.exe</a><span>07 / where_they_grow.zip</span></nav>
+<div class="collage">
+<header class="title">
+<div class="dots halftone" aria-hidden="true"></div>
+<h1>3 kraje<br>1 talerz</h1>
+<span class="sub">duża produkcja · głównie na rynek lokalny</span>
+</header>
+<aside class="side">
+<div class="win"><div class="bar">readme.txt<span aria-hidden="true"><i></i><i></i><i></i></span></div><div class="body"><p>Te trzy kraje to giganci produkcji, ale ich banany rzadko trafiają do Europy. Zjadają je głównie sami mieszkańcy.</p></div></div>
+<span class="sticker">*eksport? raczej nie.</span>
+<div class="checker" style="height:90px;border:3px solid var(--ink)" aria-hidden="true"></div>
+</aside>
+<div class="row">
+<article class="win"><div class="bar">china.exe<span aria-hidden="true"><i></i><i></i><i></i></span></div><div class="body"><h2>Chiny</h2><p>Uprawy skupiają się na ciepłym południu, m.in. w Guangdong, Guangxi i na wyspie Hajnan. To tu groźny szczep choroby panamskiej TR4 mocno uderzył w plantacje Cavendisha.</p></div></article>
+<article class="win"><div class="bar">indonesia.bmp<span aria-hidden="true"><i></i><i></i><i></i></span></div><div class="body"><h2>Indonezja</h2><p>Leży w regionie, gdzie zaczęła się historia banana. Ludzie udomowili go w Azji Południowo-Wschodniej i na Nowej Gwinei, a dziko rosnące gatunki wciąż mają tam twarde nasiona.</p></div></article>
+<article class="win"><div class="bar">brazil.gif<span aria-hidden="true"><i></i><i></i><i></i></span></div><div class="body"><h2>Brazylia</h2><p>Banan to tam codzienność. Najpopularniejsze odmiany to „prata” i „nanica”, a większość zbiorów zostaje w kraju na talerzach Brazylijczyków.</p></div></article>
+</div>
+<div class="strip checker" aria-hidden="true"></div>
+<div class="term" role="note"><span>C:\BANANA&gt;</span> find /export<br>&gt; wynik: niewiele. banany zostają w domu.<br><span>C:\BANANA&gt;</span> _</div>
+</div>
+<footer class="foot"><a href="../ekwador/">&lt; ekwador</a><a href="../jagoda/">to_jagoda &gt;</a></footer>
+</div>
+</body>
+</html>

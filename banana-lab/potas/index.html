@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Potas — Banana Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1E2340;--muted:#4A5070;--accent:#5B4BE0}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:linear-gradient(135deg,#E9D8FF 0%,#C9F1FF 45%,#D8FFF1 100%);overflow-x:hidden}
+a{color:var(--accent)}a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.blob{position:fixed;border-radius:50%;filter:blur(60px);opacity:.7;z-index:0}
+.b1{width:420px;height:420px;background:#B79CFF;top:-120px;left:-100px}
+.b2{width:380px;height:380px;background:#7FE3FF;bottom:-120px;right:-80px}
+.b3{width:260px;height:260px;background:#FFE58A;top:40%;left:55%}
+.wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:32px 16px 48px;display:flex;flex-direction:column;gap:28px}
+.glass{background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.7);border-radius:28px;backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 10px 40px rgba(60,50,140,.12)}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:14px 20px}
+.top a{text-decoration:none;font-weight:600;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.6);min-height:44px;display:inline-flex;align-items:center}
+.top span{font-size:14px;color:var(--muted)}
+.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;align-items:stretch}
+.hello{padding:36px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.hello small{font-weight:600;color:var(--accent);letter-spacing:.06em}
+h1{margin:0;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-.02em}
+.hello p{margin:0;font-size:17px;line-height:1.6;color:var(--muted)}
+.ring{padding:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.ring svg{width:min(240px,70vw)}
+.ring b{font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.card{padding:26px;display:flex;flex-direction:column;gap:10px}
+.icon{width:48px;height:48px;border-radius:16px;background:rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center}
+.card h2{margin:0;font-size:19px}
+.card p{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+.compare{padding:30px;display:flex;flex-direction:column;gap:14px}
+.compare h2{margin:0 0 4px;font-size:22px}
+.row{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center;font-size:15px}
+.pill{height:30px;border-radius:999px;background:rgba(255,255,255,.55);overflow:hidden}
+.pill i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#8C7BFF,#4FD6F5)}
+.pill i.me{background:linear-gradient(90deg,#FFC93C,#FF9A3C)}
+.note{font-size:13px;color:var(--muted);margin:0}
+.next{align-self:flex-end;text-decoration:none;font-weight:600;padding:14px 22px;min-height:44px;display:inline-flex;align-items:center}
+</style>
+</head>
+<body>
+<div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div><div class="blob b3" aria-hidden="true"></div>
+<div class="wrap">
+<nav class="glass top" aria-label="Nawigacja"><a href="../">← Banana Lab</a><span>02 / Potas</span></nav>
+<section class="hero">
+<div class="glass hello">
+<small>Jak tam Twoje mięśnie dziś?</small>
+<h1>Potas</h1>
+<p>Pierwiastek, o którym przypominasz sobie dopiero przy skurczu łydki. Banan jest jego najsłynniejszym ambasadorem, choć wcale nie rekordzistą.</p>
+</div>
+<div class="glass ring">
+<svg viewBox="0 0 200 200" role="img" aria-label="Jeden banan pokrywa około 12 procent dziennego zapotrzebowania na potas">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8C7BFF"></stop><stop offset="1" stop-color="#4FD6F5"></stop></linearGradient></defs>
+<circle cx="100" cy="100" r="78" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="18"></circle>
+<circle cx="100" cy="100" r="78" fill="none" stroke="url(#g)" stroke-width="18" stroke-linecap="round" stroke-dasharray="59 490" transform="rotate(-90 100 100)"></circle>
+<text x="100" y="98" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="40" fill="#1E2340">~12%</text>
+<text x="100" y="124" text-anchor="middle" font-family="Poppins" font-size="12" fill="#4A5070">dziennej porcji</text>
+</svg>
+<b>~420 mg w średnim bananie</b>
+<p class="note">przy zaleceniu ok. 3500 mg dziennie (EFSA)</p>
+</div>
+</section>
+<section class="grid" aria-label="Do czego służy potas">
+<article class="glass card"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B4BE0" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"></path></svg></div><h2>Serce</h2><p>Pomaga utrzymać prawidłowy rytm serca i jest ważny dla regulacji ciśnienia krwi.</p></article>
+<article class="glass card"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B4BE0" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 18c-2-6 2-12 8-12 3 0 5 2 5 5s-3 4-6 4-4 2-4 4"></path></svg></div><h2>Mięśnie</h2><p>Bierze udział w skurczu mięśni. Bez niego impulsy nie przechodzą sprawnie.</p></article>
+<article class="glass card"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B4BE0" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg></div><h2>Nerwy</h2><p>Jako elektrolit odpowiada za przewodzenie sygnałów w układzie nerwowym.</p></article>
+</section>
+<section class="glass compare" aria-labelledby="h-cmp">
+<h2 id="h-cmp">Banan na tle konkurencji</h2>
+<div class="row"><span>Banan</span><div class="pill"><i class="me" style="width:40%"></i></div></div>
+<div class="row"><span>Awokado (całe)</span><div class="pill"><i style="width:65%"></i></div></div>
+<div class="row"><span>Ziemniak ze skórką</span><div class="pill"><i style="width:88%"></i></div></div>
+<div class="row"><span>Fasola (szklanka)</span><div class="pill"><i style="width:100%"></i></div></div>
+<p class="note">Porównanie poglądowe dla typowych porcji. Wiele warzyw strączkowych i ziemniaków ma więcej potasu niż banan.</p>
+</section>
+<a class="glass next" href="../b6/">Dalej: Witamina B6 →</a>
+</div>
+</body>
+</html>

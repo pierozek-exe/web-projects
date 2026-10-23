@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>To jagoda — Banana Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Press+Start+2P&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#3B2BE8;--pink:#E81E8C;--ink:#141414;--bg:#F7F6F2;--muted:#3F3F46}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Mono',monospace;image-rendering:pixelated}
+a{color:var(--blue)}a:focus-visible{outline:3px dashed var(--pink);outline-offset:3px}
+.top{max-width:1180px;margin:0 auto;padding:18px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:'Silkscreen',monospace;font-size:15px}
+.top a{color:var(--ink);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.cta{background:var(--pink);color:#fff !important;padding:8px 14px;border:3px solid var(--ink)}
+.hero{max-width:1180px;margin:0 auto;padding:40px 16px 24px;text-align:center}
+h1{margin:0;font-family:'Silkscreen',monospace;font-weight:700;font-size:clamp(48px,12vw,168px);line-height:.9;color:var(--blue);letter-spacing:.02em}
+.sub{font-family:'Silkscreen',monospace;font-size:clamp(20px,3.6vw,44px);margin:14px 0 0}
+.hero p{max-width:52ch;margin:22px auto 0;font-size:16px;line-height:1.6;color:var(--muted)}
+.sprite{display:flex;justify-content:center;margin:28px 0 8px}
+.sprite svg{width:min(280px,70vw);height:auto;shape-rendering:crispEdges}
+.stats{max-width:1180px;margin:0 auto;padding:12px 16px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;text-align:center}
+.stat b{display:block;font-family:'Silkscreen',monospace;font-size:40px;color:var(--ink)}
+.stat span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.cards{max-width:1180px;margin:0 auto;padding:0 16px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{border:4px solid var(--ink);background:#fff;padding:22px;box-shadow:8px 8px 0 var(--blue)}
+.card h2{margin:0 0 10px;font-family:'Press Start 2P',monospace;font-size:15px;line-height:1.5}
+.card p{margin:0;font-size:15px;line-height:1.6}
+.yes{color:#0B6B2E;font-weight:700}.no{color:#B0004E;font-weight:700}
+.list{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-direction:column;gap:8px;font-size:15px}
+.foot{max-width:1180px;margin:0 auto;padding:0 16px 48px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'Silkscreen',monospace}
+.foot a{border:3px solid var(--ink);background:#fff;padding:10px 16px;text-decoration:none;color:var(--ink);box-shadow:5px 5px 0 var(--pink);min-height:44px;display:inline-flex;align-items:center}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Nawigacja"><a href="../">← BANANA LAB</a><span>08 / CIEKAWOSTKI</span><a class="cta" href="../ziele/">NEXT LEVEL →</a></nav>
+<header class="hero">
+<h1>JAGODA</h1>
+<p class="sub">ARE YOU SERIOUS?</p>
+<div class="sprite">
+<svg viewBox="0 0 28 18" role="img" aria-label="Banan w pixel arcie">
+<g fill="#141414">
+<rect x="24" y="1" width="2" height="1"></rect><rect x="23" y="2" width="2" height="2"></rect>
+<rect x="2" y="7" width="2" height="2"></rect><rect x="3" y="9" width="2" height="2"></rect><rect x="4" y="11" width="2" height="1"></rect><rect x="5" y="12" width="3" height="1"></rect><rect x="7" y="13" width="4" height="1"></rect><rect x="10" y="14" width="6" height="1"></rect><rect x="15" y="13" width="3" height="1"></rect><rect x="17" y="12" width="2" height="1"></rect><rect x="18" y="11" width="2" height="1"></rect><rect x="19" y="10" width="2" height="1"></rect><rect x="20" y="8" width="2" height="2"></rect><rect x="21" y="6" width="2" height="2"></rect><rect x="22" y="4" width="2" height="2"></rect>
+<rect x="4" y="6" width="2" height="1"></rect><rect x="6" y="7" width="2" height="1"></rect><rect x="8" y="8" width="3" height="1"></rect><rect x="11" y="9" width="4" height="1"></rect><rect x="15" y="8" width="2" height="1"></rect><rect x="17" y="7" width="2" height="1"></rect><rect x="19" y="6" width="1" height="1"></rect><rect x="20" y="5" width="2" height="1"></rect>
+</g>
+<g fill="#F5C518">
+<rect x="4" y="7" width="2" height="2"></rect><rect x="5" y="9" width="2" height="2"></rect><rect x="6" y="11" width="2" height="1"></rect><rect x="6" y="8" width="2" height="3"></rect><rect x="8" y="9" width="3" height="4"></rect><rect x="11" y="10" width="4" height="4"></rect><rect x="15" y="9" width="2" height="4"></rect><rect x="17" y="8" width="2" height="4"></rect><rect x="19" y="7" width="1" height="3"></rect><rect x="20" y="6" width="1" height="2"></rect><rect x="21" y="5" width="1" height="1"></rect>
+</g>
+<g fill="#FFE98A"><rect x="8" y="12" width="3" height="1"></rect><rect x="11" y="13" width="4" height="1"></rect></g>
+<g fill="#6E9A3A"><rect x="22" y="3" width="1" height="1"></rect><rect x="21" y="4" width="1" height="1"></rect></g>
+</svg>
+</div>
+<p>Botanicznie banan to jagoda, a truskawka nią nie jest. Brzmi jak bug w grze, ale to po prostu definicja.</p>
+</header>
+<section class="stats" aria-label="Szybkie fakty">
+<div class="stat"><b>1</b><span>kwiat daje jeden owoc</span></div>
+<div class="stat"><b>1</b><span>zalążnia w tym kwiecie</span></div>
+<div class="stat"><b>0</b><span>twardych pestek u Cavendisha</span></div>
+</section>
+<section class="cards" aria-label="Wyjaśnienie">
+<article class="card"><h2>CO TO JAGODA?</h2><p>Owoc powstały z jednego kwiatu z jedną zalążnią, z mięsistą ścianą i nasionami w środku. Banan spełnia wszystkie warunki.</p></article>
+<article class="card"><h2>A TRUSKAWKA?</h2><p>Truskawka to owoc rzekomy. Jej czerwona część to rozrośnięte dno kwiatowe, a prawdziwe owocki to małe ziarenka na powierzchni.</p></article>
+<article class="card"><h2>KTO JESZCZE?</h2><ul class="list"><li><span class="yes">[TAK]</span> pomidor</li><li><span class="yes">[TAK]</span> bakłażan</li><li><span class="yes">[TAK]</span> kiwi</li><li><span class="no">[NIE]</span> truskawka, malina</li></ul></article>
+<article class="card"><h2>GDZIE PESTKI?</h2><p>Ciemne kropki w środku banana to szczątkowe nasiona. Dzikie banany mają duże, twarde pestki, które łatwo złamią ząb.</p></article>
+</section>
+<footer class="foot"><a href="../chiny-indonezja-brazylia/">← PREV</a><a href="../ziele/">NEXT →</a></footer>
+</body>
+</html>

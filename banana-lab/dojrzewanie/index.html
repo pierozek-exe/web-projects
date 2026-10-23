@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dojrzewanie — Banana Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800;900&family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#D9D9D5;--cell:#EFEFEC;--ink:#111;--red:#E3262B;--muted:#555}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif}
+a{color:var(--ink)}a:hover{color:#B71C21}a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.outer{max-width:1320px;margin:clamp(12px,2.4vw,36px) auto;padding:1px;background:var(--ink);clip-path:polygon(20px 0,calc(100% - 20px) 0,100% 20px,100% calc(100% - 20px),calc(100% - 20px) 100%,20px 100%,0 calc(100% - 20px),0 20px)}
+.grid{display:flex;flex-direction:column;gap:1px;background:var(--ink)}
+.row{display:grid;gap:1px;background:var(--ink)}
+.c{background:var(--cell);padding:18px 28px}
+.mono{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--muted)}
+.r3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.r7{grid-template-columns:repeat(7,minmax(0,1fr))}
+nav a{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.12em;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.hero{padding:clamp(28px,4vw,56px) 28px}
+.hero .lbl{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;display:flex;justify-content:space-between}
+.hero .lbl i{color:var(--red);font-style:normal;font-size:16px}
+h1{margin:16px 0 0;font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(40px,10vw,150px);line-height:.92;letter-spacing:-.035em;text-transform:lowercase}
+.lead{font-size:clamp(19px,1.7vw,24px);line-height:1.35;font-weight:500;margin:0;max-width:30ch}
+.formula{background:var(--red);color:#fff;display:flex;flex-direction:column;justify-content:center;gap:8px;min-height:200px;clip-path:polygon(0 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%)}
+.formula b{font-family:'Unbounded',sans-serif;font-size:clamp(40px,5vw,64px);line-height:1}
+.formula span{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.12em}
+.stage{padding:16px 12px;display:flex;flex-direction:column;gap:10px;min-height:150px}
+.sw{height:56px;border:1px solid var(--ink)}
+.stage b{font-family:'Space Mono',monospace;font-size:12px}
+.stage span{font-size:13px;line-height:1.35}
+h2{margin:0;font-family:'Unbounded',sans-serif;font-weight:800;font-size:clamp(26px,3vw,40px);letter-spacing:-.03em;line-height:1;text-transform:lowercase}
+.txt p{margin:0;font-size:16px;line-height:1.55}
+.exp{display:flex;flex-direction:column;gap:0;font-family:'Space Mono',monospace;font-size:13px}
+.exp div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--ink)}
+.exp div:last-child{border-bottom:0}
+.exp span:first-child{color:var(--muted)}
+.gridpat{min-height:80px;background-image:linear-gradient(var(--ink) 1px,transparent 1px),linear-gradient(90deg,var(--ink) 1px,transparent 1px);background-size:14px 14px;opacity:.5}
+@media (max-width:760px){.r7{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="outer"><div class="grid">
+<div class="row r3">
+<nav class="c" aria-label="Nawigacja"><a href="../">← BANANA LAB</a></nav>
+<div class="c mono">11 / LOG EKSPERYMENTU</div>
+<div class="c mono">C₂H₄ · ETYLEN · STATUS: AKTYWNY</div>
+</div>
+<header class="c hero">
+<div class="lbl"><span><i>✱</i>  CIEKAWOSTKA · PROCES</span><i>✱</i></div>
+<h1>dojrzewanie</h1>
+</header>
+<div class="row r3">
+<div class="c" style="display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:200px"><p class="lead">Banan sam wytwarza gaz, który każe mu dojrzewać. I przy okazji przyspiesza sąsiadów.</p><span class="mono" style="font-size:12px">/owoc klimakteryczny/</span></div>
+<div class="c formula"><b>C₂H₄</b><span>ETYLEN · HORMON DOJRZEWANIA</span></div>
+<div class="c txt"><p>Banany należą do owoców klimakterycznych: dojrzewają także po zerwaniu. Etylen uruchamia rozkład skrobi do cukrów, mięknięcie miąższu i zmianę koloru skórki z zielonej na żółtą.</p></div>
+</div>
+<div class="c mono">FAZY / SKALA KOLORU SKÓRKI 1–7</div>
+<div class="row r7" aria-label="Fazy dojrzewania">
+<div class="c stage"><div class="sw" style="background:#6E9A3A"></div><b>01</b><span>cały zielony</span></div>
+<div class="c stage"><div class="sw" style="background:#86A63C"></div><b>02</b><span>ślad żółtego</span></div>
+<div class="c stage"><div class="sw" style="background:#A3B53F"></div><b>03</b><span>więcej zielonego</span></div>
+<div class="c stage"><div class="sw" style="background:#C4C443"></div><b>04</b><span>więcej żółtego</span></div>
+<div class="c stage"><div class="sw" style="background:#E0C93D"></div><b>05</b><span>zielona końcówka</span></div>
+<div class="c stage"><div class="sw" style="background:#F2CC32"></div><b>06</b><span>cały żółty</span></div>
+<div class="c stage"><div class="sw" style="background:#E5B52C;background-image:radial-gradient(#5A3B12 2px,transparent 2.5px);background-size:14px 12px"></div><b>07</b><span>cętki</span></div>
+</div>
+<div class="row r3">
+<section class="c" aria-labelledby="h-exp" style="display:flex;flex-direction:column;gap:14px">
+<span class="mono">EKSPERYMENT 01</span>
+<h2 id="h-exp">papierowa torba</h2>
+<div class="exp">
+<div><span>PRÓBKA</span><span>twarde awokado</span></div>
+<div><span>KATALIZATOR</span><span>dojrzały banan</span></div>
+<div><span>POJEMNIK</span><span>papierowa torba</span></div>
+<div><span>WYNIK</span><span>szybsze mięknięcie</span></div>
+</div>
+</section>
+<section class="c txt" aria-labelledby="h-port" style="display:flex;flex-direction:column;gap:14px">
+<span class="mono">PROTOKÓŁ PRZEMYSŁOWY</span>
+<h2 id="h-port">dojrzewalnia</h2>
+<p>Banany płyną przez ocean zielone. W kraju docelowym trafiają do komór, gdzie kontrolowana temperatura i dawka etylenu sprawiają, że żółkną równo i na czas dostawy do sklepów.</p>
+</section>
+<section class="c txt" aria-labelledby="h-tip" style="display:flex;flex-direction:column;gap:14px">
+<span class="mono">ZALECENIA DOMOWE</span>
+<h2 id="h-tip">kontrola tempa</h2>
+<p>Chcesz wolniej? Trzymaj banany z dala od innych owoców. Lodówka spowalnia dojrzewanie, ale skórka od zimna ciemnieje, choć miąższ zostaje dobry. Chcesz szybciej? Torba i jabłko obok.</p>
+</section>
+</div>
+<div class="row r3">
+<div class="c gridpat" aria-hidden="true"></div>
+<a class="c mono" href="../radioaktywny/" style="text-decoration:none;display:flex;align-items:center">← POPRZEDNI: LEKKO RADIOAKTYWNY</a>
+<a class="c mono" href="../" style="text-decoration:none;display:flex;align-items:center;justify-content:flex-end">KONIEC LOGU · WRÓĆ DO BANANA LAB →</a>
+</div>
+</div></div>
+</body>
+</html>

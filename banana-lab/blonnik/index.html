@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Błonnik — Banana Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1EEF0;--ink:#3A3340;--muted:#5E5664;--pink:#F48FA3;--pinkd:#D9667E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,sans-serif}
+a{color:var(--ink)}a:focus-visible{outline:3px solid var(--pinkd);outline-offset:3px}
+.clay{background:#F6F3F5;border-radius:36px;box-shadow:14px 14px 30px rgba(170,150,165,.45),-10px -10px 24px rgba(255,255,255,.95),inset 6px 6px 12px rgba(255,255,255,.9),inset -6px -6px 14px rgba(190,170,185,.35)}
+.wrap{max-width:1100px;margin:0 auto;padding:32px 16px 56px;display:flex;flex-direction:column;gap:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:800;background:#F6F3F5;box-shadow:8px 8px 16px rgba(170,150,165,.45),-6px -6px 14px rgba(255,255,255,.95),inset 3px 3px 6px rgba(255,255,255,.9),inset -3px -3px 8px rgba(190,170,185,.35)}
+.btn.pink{background:var(--pink);color:#3A1520;box-shadow:8px 8px 16px rgba(217,102,126,.45),-6px -6px 14px rgba(255,255,255,.95),inset 4px 4px 8px rgba(255,220,228,.8),inset -4px -4px 10px rgba(180,60,90,.35)}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.hero{padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:center}
+h1{margin:0;font-weight:900;font-size:clamp(44px,7vw,84px);line-height:1;letter-spacing:-.02em}
+.hero p{font-size:18px;line-height:1.6;color:var(--muted);margin:14px 0 0}
+.gauge{display:flex;flex-direction:column;align-items:center;gap:12px}
+.gauge svg{width:min(260px,70vw)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.card{padding:30px;display:flex;flex-direction:column;gap:12px}
+.blob{width:64px;height:64px;border-radius:22px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px}
+.card h2{margin:0;font-size:21px;font-weight:900}
+.card p{margin:0;font-size:16px;line-height:1.6;color:var(--muted)}
+.slider{padding:30px;display:flex;flex-direction:column;gap:18px}
+.slider h2{margin:0;font-size:22px;font-weight:900}
+.track{height:26px;border-radius:999px;background:#ECE7EA;box-shadow:inset 5px 5px 10px rgba(170,150,165,.45),inset -5px -5px 10px rgba(255,255,255,.95);position:relative}
+.track i{position:absolute;left:0;top:0;bottom:0;width:12%;border-radius:999px;background:var(--pink);box-shadow:inset 3px 3px 6px rgba(255,220,228,.9),inset -3px -3px 6px rgba(180,60,90,.35)}
+.track b{position:absolute;left:12%;top:50%;width:40px;height:40px;transform:translate(-50%,-50%);border-radius:50%;background:#F6F3F5;box-shadow:5px 5px 10px rgba(170,150,165,.5),-4px -4px 8px #fff}
+.legend{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);font-weight:600}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="top" aria-label="Nawigacja"><a class="btn" href="../">← Banana Lab</a><span class="btn" aria-hidden="true" style="pointer-events:none">04 / Błonnik</span></nav>
+<section class="clay hero" aria-labelledby="h1">
+<div>
+<h1 id="h1">Błonnik,<br>czyli miękka siła.</h1>
+<p>Średni banan ma około 3 g błonnika. Niewiele? To jakieś 12% dziennej porcji, a do tego w łagodnej, przyjaznej dla brzucha formie.</p>
+</div>
+<div class="gauge">
+<svg viewBox="0 0 200 200" role="img" aria-label="3 gramy błonnika z 25 zalecanych dziennie">
+<circle cx="100" cy="100" r="72" fill="none" stroke="#E6E0E4" stroke-width="22"></circle>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#F48FA3" stroke-width="22" stroke-linecap="round" stroke-dasharray="54 453" transform="rotate(-90 100 100)"></circle>
+<text x="100" y="100" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="44" fill="#3A3340">3 g</text>
+<text x="100" y="126" text-anchor="middle" font-family="Nunito" font-weight="600" font-size="13" fill="#5E5664">z ~25 g dziennie</text>
+</svg>
+</div>
+</section>
+<section class="cards" aria-label="Rodzaje błonnika">
+<article class="clay card"><div class="blob" style="background:#FFD6DF">P</div><h2>Pektyna</h2><p>Rozpuszczalny błonnik, który odpowiada za miękką konsystencję banana. Jej łańcuchy rozpadają się w czasie dojrzewania, dlatego banan mięknie.</p></article>
+<article class="clay card"><div class="blob" style="background:#D9F2E3">S</div><h2>Skrobia oporna</h2><p>Jest jej dużo w zielonych bananach. Nie trawi się w jelicie cienkim i działa jak pożywka dla dobrych bakterii jelitowych.</p></article>
+<article class="clay card"><div class="blob" style="background:#FFF1C9">B</div><h2>Brzuch</h2><p>Błonnik pomaga w regularnym trawieniu i daje uczucie sytości na dłużej, co przydaje się między posiłkami.</p></article>
+</section>
+<section class="clay slider" aria-labelledby="h-day">
+<h2 id="h-day">Jeden banan na tle dnia</h2>
+<div class="track" role="img" aria-label="Jeden banan pokrywa około 12 procent dziennego zapotrzebowania na błonnik"><i></i><b></b></div>
+<div class="legend"><span>0 g</span><span>banan ~3 g</span><span>cel ~25 g</span></div>
+</section>
+<footer class="foot"><a class="btn" href="../b6/">← Witamina B6</a><a class="btn pink" href="../indie/">Dalej: Indie →</a></footer>
+</div>
+</body>
+</html>
